@@ -3,10 +3,10 @@ pipeline {
     agent any
 
  
-
+   tools{
+	maven 'MyMaven'
+   }
     stages {
-
- 
 
         stage('Checkout') {
 
@@ -17,9 +17,6 @@ pipeline {
             }
 
         }
-
- 
-
         stage('Build') {
 
             steps {
@@ -29,9 +26,6 @@ pipeline {
             }
 
         }
-
- 
-
         stage('Test') {
 
             steps {
